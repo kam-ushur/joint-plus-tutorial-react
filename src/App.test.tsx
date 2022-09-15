@@ -1,9 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders JointJS paper', () => {
+test('renders JointJS paper', async () => {
     render(<App />);
-    const paper = document.querySelector('.joint-paper');
-    expect(paper).toBeInTheDocument();
+
+    const element  = await screen.findByText('lorem')
+    expect(element).toBeInTheDocument();
+
 });

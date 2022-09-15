@@ -34,7 +34,10 @@ function App() {
       size: { width: 100, height: 50 },
       attrs: {
           label: {
-             text: 'Hello World'
+             text: 'Hello World',
+             textWrap: { // Seems to cause TypeError: a.getComputedTextLength is not a function
+              text: 'lorem ipsum dolor sit amet consectetur adipiscing elit',
+            }
          }
        }
     });
